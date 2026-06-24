@@ -123,7 +123,11 @@
             <h3>Request a Private Tour</h3>
             <p class="form-sub">Complete the form and our leasing team will contact you within one business day to confirm your preferred time.</p>
 
-            <form class="contact-form" novalidate aria-label="Tour request form">
+            <form class="contact-form" action="https://formsubmit.co/mercurybethesda@gmail.com" method="POST" novalidate aria-label="Tour request form">
+              <input type="hidden" name="_subject" value="New Tour Request - The Mercury Bethesda">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://www.themercurybethesda.com/contact.html?success=true">
               <div class="form-row">
                 <div class="form-group">
                   <label for="first-name">First Name <span aria-hidden="true">*</span></label>

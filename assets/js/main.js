@@ -111,11 +111,9 @@
   /* ---------- Contact form ---------- */
   const form    = document.querySelector('.contact-form');
   const success = document.querySelector('.form-success');
-
-  if (form) {
+// Check if redirected back with success parameter
+ if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
       // Basic validation
       let valid = true;
       form.querySelectorAll('[required]').forEach(function (field) {
@@ -127,8 +125,23 @@
         }
       });
 
-      if (!valid) return;
+      if (!valid) {
+        e.preventDefault();
+        return;
+      }
 
+      // Log form data to console for debugging
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log('=== TOUR REQUEST SUBMITTED ===');
+      console.log('Timestamp:', new Date().toLocaleString());
+      console.log('Form Data:', data);
+      console.table(data);
+
+      // If valid, show sending state and let form submit naturally
+      const btn = form.querySelector('[type="submit"]');
+      if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
+    });
       // Simulate submission
       const btn = form.querySelector('[type="submit"]');
       if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }

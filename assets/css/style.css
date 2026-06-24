@@ -859,7 +859,7 @@ label {
   color: var(--navy);
   margin-bottom: 0.5rem;
 }
-input, select, textarea {
+input:not([type="checkbox"]), select, textarea {
   width: 100%;
   padding: 0.9rem 1rem;
   border: 1px solid #ddd;
@@ -877,7 +877,19 @@ textarea { resize: vertical; min-height: 120px; }
 select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
 
 .form-check { display: flex; gap: 0.75rem; align-items: flex-start; }
-.form-check input[type="checkbox"] { width: auto; min-width: 16px; height: 16px; margin-top: 3px; accent-color: var(--gold); }
+.form-check input[type="checkbox"] { 
+  width: 18px; 
+  min-width: 18px; 
+  height: 18px; 
+  margin-top: 3px; 
+  accent-color: var(--gold); 
+  cursor: pointer; 
+  flex-shrink: 0;
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  pointer-events: auto;
+}
 .form-check label { font-size: 0.78rem; text-transform: none; letter-spacing: normal; font-weight: 400; color: var(--gray-dark); }
 
 .form-submit .btn { width: 100%; text-align: center; padding: 1rem; }
