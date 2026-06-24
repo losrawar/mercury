@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | The Mercury Bethesda Luxury Apartments</title>
+  <meta name="description" content="Browse the gallery of The Mercury Bethesda — luxury interiors, rooftop terrace, Art Deco architecture, and the Wildwood Bethesda neighborhood." />
+  <meta name="keywords" content="The Mercury Bethesda photos, Bethesda luxury apartment gallery, Wildwood apartments interior, luxury apartment Bethesda MD images" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Gallery | The Mercury Bethesda" />
+  <meta property="og:description" content="See inside The Mercury Bethesda — boutique luxury living in Wildwood, Bethesda MD." />
+  <meta property="og:url"         content="https://www.themercurybethesda.com/gallery.html" />
+  <meta property="og:image"       content="assets/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="canonical" href="https://www.themercurybethesda.com/gallery.html" />
+
+  <style>
+    /* Gallery filter tabs */
+    .gallery-filters {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.4rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--gray-light);
+      color: var(--gray-dark);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    /* Category labels inside gallery items */
+    .gallery-item__label {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(13,31,60,0.85);
+      color: var(--gold);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .gallery-item:hover .gallery-item__label { opacity: 1; }
+
+    /* Mosaic placeholder colors */
+    .ph-1 { background: linear-gradient(160deg, #0d1f3c 0%, #1a3560 100%); }
+    .ph-2 { background: linear-gradient(160deg, #162a50 0%, #0d1f3c 100%); }
+    .ph-3 { background: linear-gradient(160deg, #1a3560 0%, #0d2240 100%); }
+    .ph-4 { background: linear-gradient(160deg, #0d1f3c 0%, #253a5f 100%); }
+    .ph-5 { background: linear-gradient(160deg, #243252 0%, #1a3060 100%); }
+    .ph-6 { background: linear-gradient(160deg, #0d2240 0%, #142a4e 100%); }
+
+    .ph-text {
+      color: rgba(201,168,76,0.35);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav nav--solid" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="The Mercury Bethesda – Home">
+          <span class="nav__logo-name">The Mercury</span>
+          <span class="nav__logo-sub">Bethesda</span>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html" class="nav__cta btn btn-gold">Schedule a Tour</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html" class="btn btn-gold">Schedule a Tour</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="gallery-title">
+      <div class="page-hero__content">
+        <span class="eyebrow">Visual Tour</span>
+        <h1 id="gallery-title">Gallery</h1>
+        <p>Step inside The Mercury Bethesda. Explore our residences, communal spaces, and the neighborhood that surrounds you.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" style="padding-top:60px;" aria-label="Photo gallery">
+      <div class="container">
+
+        <div class="gallery-filters" role="tablist" aria-label="Filter gallery by category">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
+          <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interiors</button>
+          <button class="filter-btn" data-filter="amenities" role="tab" aria-selected="false">Amenities</button>
+          <button class="filter-btn" data-filter="neighborhood" role="tab" aria-selected="false">Neighborhood</button>
+        </div>
+
+        <div class="gallery-grid fade-up" role="list">
+
+          <!-- Row 1 -->
+          <div class="gallery-item tall" data-category="exterior" role="listitem" tabindex="0" aria-label="Building exterior – Art Deco facade">
+            <div class="gallery-placeholder ph-1"><span class="ph-text">Art Deco Exterior</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Exterior</span>
+          </div>
+          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Living room with Italian cabinetry">
+            <div class="gallery-placeholder ph-2"><span class="ph-text">Living Room</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Interior</span>
+          </div>
+          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Rooftop terrace with hot tub">
+            <div class="gallery-placeholder ph-3"><span class="ph-text">Rooftop Terrace</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Amenities</span>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Kitchen with stone countertops">
+            <div class="gallery-placeholder ph-4"><span class="ph-text">Kitchen</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Interior</span>
+          </div>
+          <div class="gallery-item wide" data-category="amenities" role="listitem" tabindex="0" aria-label="Resident clubhouse and social lounge">
+            <div class="gallery-placeholder ph-5"><span class="ph-text">Resident Clubhouse</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Amenities</span>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="gallery-item wide" data-category="neighborhood" role="listitem" tabindex="0" aria-label="Wildwood Shopping Center streetscape">
+            <div class="gallery-placeholder ph-6"><span class="ph-text">Wildwood District</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Neighborhood</span>
+          </div>
+          <div class="gallery-item tall" data-category="interior" role="listitem" tabindex="0" aria-label="Primary bedroom suite">
+            <div class="gallery-placeholder ph-1"><span class="ph-text">Primary Suite</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Interior</span>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Fully equipped fitness center">
+            <div class="gallery-placeholder ph-2"><span class="ph-text">Fitness Center</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Amenities</span>
+          </div>
+          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Bathroom with luxury finishes">
+            <div class="gallery-placeholder ph-3"><span class="ph-text">Spa Bath</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Interior</span>
+          </div>
+          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Business lounge and workspaces">
+            <div class="gallery-placeholder ph-4"><span class="ph-text">Business Lounge</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Amenities</span>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="gallery-item" data-category="neighborhood" role="listitem" tabindex="0" aria-label="Bethesda dining and cafes">
+            <div class="gallery-placeholder ph-5"><span class="ph-text">Local Dining</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Neighborhood</span>
+          </div>
+          <div class="gallery-item" data-category="exterior" role="listitem" tabindex="0" aria-label="Building entrance with Art Deco details">
+            <div class="gallery-placeholder ph-6"><span class="ph-text">Grand Entrance</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Exterior</span>
+          </div>
+          <div class="gallery-item" data-category="neighborhood" role="listitem" tabindex="0" aria-label="NIH and medical center campus">
+            <div class="gallery-placeholder ph-1"><span class="ph-text">Medical District</span></div>
+            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
+            <span class="gallery-item__label">Neighborhood</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery note -->
+    <div style="background:var(--off-white);padding:1.5rem 0;text-align:center;">
+      <p style="font-size:0.8rem;color:var(--gray);letter-spacing:0.05em;">
+        Renderings and photos are representative of community finishes and features. Contact our leasing team for current availability.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="gallery-cta">
+      <div class="container">
+        <span class="eyebrow" style="color:var(--navy);opacity:0.6;">Experience It In Person</span>
+        <h2 id="gallery-cta">Schedule Your Private Tour</h2>
+        <p>Nothing compares to seeing The Mercury in person. Let our leasing team show you everything this community has to offer.</p>
+        <a href="contact.html" class="btn btn-navy">Book a Tour</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox__close" aria-label="Close lightbox">&times;</button>
+    <img class="lightbox__img" src="" alt="" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__brand-name">The Mercury</span>
+          <span class="footer__brand-sub">Bethesda</span>
+          <p class="footer__tagline">Boutique luxury living in Bethesda's coveted Wildwood district. 72 residences. Infinite distinction.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="location.html">Location</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Community</h4>
+          <a href="amenities.html#building">Building Amenities</a>
+          <a href="amenities.html#apartments">Apartment Features</a>
+          <a href="amenities.html#neighborhood">Neighborhood</a>
+          <a href="contact.html">Schedule a Tour</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <div class="footer__contact-line">
+            <span>📍</span>
+            <span>Wildwood District<br />Bethesda, MD 20814</span>
+          </div>
+          <div class="footer__contact-line">
+            <span>📞</span>
+            <span>(301) 555-0190</span>
+          </div>
+          <div class="footer__contact-line">
+            <span>✉️</span>
+            <span>leasing@themercurybethesda.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 The Mercury Bethesda. All rights reserved.</span>
+        <div>
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#">Fair Housing</a> &nbsp;·&nbsp;
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Gallery filter */
+    (function () {
+      var btns  = document.querySelectorAll('.filter-btn');
+      var items = document.querySelectorAll('.gallery-item');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = this.getAttribute('data-filter');
+
+          btns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          items.forEach(function (item) {
+            var cat = item.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
