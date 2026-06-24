@@ -142,15 +142,7 @@
       const btn = form.querySelector('[type="submit"]');
       if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
     });
-      // Simulate submission
-      const btn = form.querySelector('[type="submit"]');
-      if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
-
-      setTimeout(function () {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      }, 900);
-    });
+      
 
     // Remove red border on input
     form.querySelectorAll('input, select, textarea').forEach(function (field) {
