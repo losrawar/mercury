@@ -130,87 +130,9 @@
           <button class="filter-btn" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
           <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interiors</button>
           <button class="filter-btn" data-filter="amenities" role="tab" aria-selected="false">Amenities</button>
-          <button class="filter-btn" data-filter="neighborhood" role="tab" aria-selected="false">Neighborhood</button>
         </div>
 
-        <div class="gallery-grid fade-up" role="list">
-
-          <!-- Row 1 -->
-          <div class="gallery-item tall" data-category="exterior" role="listitem" tabindex="0" aria-label="Building exterior – Art Deco facade">
-            <div class="gallery-placeholder ph-1"><span class="ph-text">Art Deco Exterior</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Exterior</span>
-          </div>
-          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Living room with Italian cabinetry">
-            <div class="gallery-placeholder ph-2"><span class="ph-text">Living Room</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Interior</span>
-          </div>
-          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Rooftop terrace with hot tub">
-            <div class="gallery-placeholder ph-3"><span class="ph-text">Rooftop Terrace</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Amenities</span>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Kitchen with stone countertops">
-            <div class="gallery-placeholder ph-4"><span class="ph-text">Kitchen</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Interior</span>
-          </div>
-          <div class="gallery-item wide" data-category="amenities" role="listitem" tabindex="0" aria-label="Resident clubhouse and social lounge">
-            <div class="gallery-placeholder ph-5"><span class="ph-text">Resident Clubhouse</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Amenities</span>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="gallery-item wide" data-category="neighborhood" role="listitem" tabindex="0" aria-label="Wildwood Shopping Center streetscape">
-            <div class="gallery-placeholder ph-6"><span class="ph-text">Wildwood District</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Neighborhood</span>
-          </div>
-          <div class="gallery-item tall" data-category="interior" role="listitem" tabindex="0" aria-label="Primary bedroom suite">
-            <div class="gallery-placeholder ph-1"><span class="ph-text">Primary Suite</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Interior</span>
-          </div>
-
-          <!-- Row 4 -->
-          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Fully equipped fitness center">
-            <div class="gallery-placeholder ph-2"><span class="ph-text">Fitness Center</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Amenities</span>
-          </div>
-          <div class="gallery-item" data-category="interior" role="listitem" tabindex="0" aria-label="Bathroom with luxury finishes">
-            <div class="gallery-placeholder ph-3"><span class="ph-text">Spa Bath</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Interior</span>
-          </div>
-          <div class="gallery-item" data-category="amenities" role="listitem" tabindex="0" aria-label="Business lounge and workspaces">
-            <div class="gallery-placeholder ph-4"><span class="ph-text">Business Lounge</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Amenities</span>
-          </div>
-
-          <!-- Row 5 -->
-          <div class="gallery-item" data-category="neighborhood" role="listitem" tabindex="0" aria-label="Bethesda dining and cafes">
-            <div class="gallery-placeholder ph-5"><span class="ph-text">Local Dining</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Neighborhood</span>
-          </div>
-          <div class="gallery-item" data-category="exterior" role="listitem" tabindex="0" aria-label="Building entrance with Art Deco details">
-            <div class="gallery-placeholder ph-6"><span class="ph-text">Grand Entrance</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Exterior</span>
-          </div>
-          <div class="gallery-item" data-category="neighborhood" role="listitem" tabindex="0" aria-label="NIH and medical center campus">
-            <div class="gallery-placeholder ph-1"><span class="ph-text">Medical District</span></div>
-            <div class="gallery-item__overlay" aria-hidden="true">&#43;</div>
-            <span class="gallery-item__label">Neighborhood</span>
-          </div>
-
-        </div>
+        <div class="gallery-grid fade-up" id="gallery-grid" role="list"></div>
       </div>
     </section>
 
@@ -292,29 +214,95 @@
 
   <script src="assets/js/main.js"></script>
   <script>
-    /* Gallery filter */
-    (function () {
-      var btns  = document.querySelectorAll('.filter-btn');
-      var items = document.querySelectorAll('.gallery-item');
+    /* ================================================
+       ADD YOUR IMAGES HERE
+       - file: image filename inside assets/images/
+       - category: "exterior" | "interior" | "amenities"
+       - alt: short description of the photo
+       ================================================ */
+    var GALLERY_IMAGES = [
+      { file: "themercury11.jpg",  category: "amenities", alt: "Lobby Chandelier" },
+      { file: "themercury125.jpg", category: "amenities", alt: "Art Deco Lounge" },
+      { file: "themercury131.jpg", category: "amenities", alt: "Resident Lounge" },
+      { file: "themercury133.jpg", category: "amenities", alt: "Lounge Seating" },
+      { file: "themercury135.jpg", category: "interior",  alt: "Living Room" },
+      { file: "themercury141.jpg", category: "interior",  alt: "Spa Bath" },
+      { file: "themercury144.jpg", category: "amenities", alt: "Grand Lobby" },
+      { file: "themercury155.jpg", category: "interior",  alt: "Soaking Tub" },
+      { file: "themercury21.jpg",  category: "amenities", alt: "Resident Clubhouse" },
+      { file: "themercury31.jpg",  category: "interior",  alt: "Powder Room" },
+      /* Add more images below — just copy the line above and change the values */
+    ];
 
+    /* Build gallery */
+    (function () {
+      var grid = document.getElementById('gallery-grid');
+      GALLERY_IMAGES.forEach(function (img) {
+        var src = 'assets/images/' + img.file;
+        var item = document.createElement('div');
+        item.className = 'gallery-item';
+        item.setAttribute('data-category', img.category);
+        item.setAttribute('data-src', src);
+        item.setAttribute('data-alt', img.alt);
+        item.setAttribute('role', 'listitem');
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('aria-label', img.alt);
+        item.style.cursor = 'pointer';
+        item.innerHTML =
+          '<img src="' + src + '" alt="' + img.alt + '" style="width:100%;height:100%;object-fit:cover;" />' +
+          '<div class="gallery-item__overlay" aria-hidden="true">&#43;</div>' +
+          '<span class="gallery-item__label">' + img.category.charAt(0).toUpperCase() + img.category.slice(1) + '</span>';
+        grid.appendChild(item);
+      });
+
+      /* Lightbox — use delegation so it works on dynamically built items */
+      var lightbox = document.querySelector('.lightbox');
+      var lbImg    = document.querySelector('.lightbox__img');
+      var lbClose  = document.querySelector('.lightbox__close');
+
+      function openLightbox(src, alt) {
+        lbImg.src = src;
+        lbImg.alt = alt || 'The Mercury Bethesda';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      grid.addEventListener('click', function (e) {
+        var item = e.target.closest('.gallery-item');
+        if (item) openLightbox(item.getAttribute('data-src'), item.getAttribute('data-alt'));
+      });
+      grid.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          var item = e.target.closest('.gallery-item');
+          if (item) openLightbox(item.getAttribute('data-src'), item.getAttribute('data-alt'));
+        }
+      });
+      lbClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+      });
+
+      /* Filter */
+      var btns = document.querySelectorAll('.filter-btn');
       btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
           var filter = this.getAttribute('data-filter');
-
           btns.forEach(function (b) {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
           });
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
-
-          items.forEach(function (item) {
-            var cat = item.getAttribute('data-category');
-            if (filter === 'all' || cat === filter) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
+          document.querySelectorAll('.gallery-item').forEach(function (item) {
+            item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? '' : 'none';
           });
         });
       });

@@ -62,64 +62,10 @@
     <!-- CONTACT CONTENT -->
     <section class="section" aria-label="Contact and tour scheduling">
       <div class="container">
-        <div class="contact-grid">
+        <div style="max-width:680px;margin:0 auto;">
 
-          <!-- LEFT: Info -->
-          <div class="contact-info fade-up">
-            <span class="eyebrow">Get in Touch</span>
-            <h2>We're Here to Help</h2>
-            <p>Whether you're ready to make The Mercury your home, or simply want to learn more, our dedicated leasing team is here to answer every question and guide you through the process.</p>
-
-            <div class="contact-details">
-              <div class="contact-detail">
-                <span class="contact-detail__icon" aria-hidden="true">📍</span>
-                <div>
-                  <span class="contact-detail__label">Address</span>
-                  <span class="contact-detail__value">Wildwood District<br />Bethesda, MD 20814</span>
-                </div>
-              </div>
-              <div class="contact-detail">
-                <span class="contact-detail__icon" aria-hidden="true">📞</span>
-                <div>
-                  <span class="contact-detail__label">Phone</span>
-                  <span class="contact-detail__value">(301) 555-0190</span>
-                </div>
-              </div>
-              <div class="contact-detail">
-                <span class="contact-detail__icon" aria-hidden="true">✉️</span>
-                <div>
-                  <span class="contact-detail__label">Email</span>
-                  <span class="contact-detail__value">leasing@themercurybethesda.com</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="office-hours">
-              <h4>Leasing Office Hours</h4>
-              <table aria-label="Office hours">
-                <tbody>
-                  <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
-                  <tr><td>Saturday</td><td>10:00 AM – 5:00 PM</td></tr>
-                  <tr><td>Sunday</td><td>12:00 PM – 4:00 PM</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Why tour block -->
-            <div style="margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--gray-light);">
-              <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--navy);margin-bottom:1rem;">What to Expect on Your Tour</h3>
-              <div class="walk-items">
-                <div class="walk-item">Personalized walkthrough of available residences</div>
-                <div class="walk-item">Full access to building amenities and common areas</div>
-                <div class="walk-item">Neighborhood orientation and walkability tour</div>
-                <div class="walk-item">Transparent pricing and availability information</div>
-                <div class="walk-item">No pressure — just a genuine introduction to The Mercury</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: Form -->
-          <div class="contact-form-wrap fade-up" style="transition-delay:0.15s;">
+          <!-- Form -->
+          <div class="contact-form-wrap fade-up">
             <h3>Request a Private Tour</h3>
             <p class="form-sub">Complete the form and our leasing team will contact you within one business day to confirm your preferred time.</p>
 
@@ -131,22 +77,22 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="first-name">First Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="first-name" name="first_name" required autocomplete="given-name" placeholder="Jane" />
+                  <input type="text" id="first-name" name="first_name" required autocomplete="given-name" />
                 </div>
                 <div class="form-group">
                   <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="last-name" name="last_name" required autocomplete="family-name" placeholder="Smith" />
+                  <input type="text" id="last-name" name="last_name" required autocomplete="family-name" />
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+                  <input type="email" id="email" name="email" required autocomplete="email" />
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(301) 555-0000" />
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" />
                 </div>
               </div>
 
@@ -161,17 +107,6 @@
                 </select>
               </div>
 
-              <div class="form-group">
-                <label for="bed-type">Residence Type</label>
-                <select id="bed-type" name="bed_type">
-                  <option value="" disabled selected>Select preference</option>
-                  <option value="1br">1 Bedroom</option>
-                  <option value="1br-den">1 Bedroom + Den</option>
-                  <option value="2br">2 Bedroom</option>
-                  <option value="2br-den">2 Bedroom + Den</option>
-                  <option value="undecided">Not Sure Yet</option>
-                </select>
-              </div>
 
               <div class="form-row">
                 <div class="form-group">
@@ -191,7 +126,7 @@
 
               <div class="form-group">
                 <label for="message">Questions or Comments</label>
-                <textarea id="message" name="message" placeholder="Tell us anything you'd like us to know before your visit…"></textarea>
+                <textarea id="message" name="message"></textarea>
               </div>
 
               <div class="form-group form-check">
@@ -217,8 +152,6 @@
               <p>Your tour request has been received. A member of our leasing team will contact you within one business day to confirm your appointment.</p>
               <a href="index.html" class="btn btn-navy" style="margin-top:1.5rem;">Return Home</a>
             </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -269,7 +202,7 @@
           </div>
           <div class="footer__contact-line">
             <span>📞</span>
-            <span>(301) 555-0190</span>
+            <span>/span>
           </div>
           <div class="footer__contact-line">
             <span>✉️</span>
