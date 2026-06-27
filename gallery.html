@@ -130,6 +130,7 @@
           <button class="filter-btn" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
           <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interiors</button>
           <button class="filter-btn" data-filter="amenities" role="tab" aria-selected="false">Amenities</button>
+          <button class="filter-btn" data-filter="neighborhood" role="tab" aria-selected="false">Neighborhood</button>
         </div>
 
         <div class="gallery-grid fade-up" id="gallery-grid" role="list"></div>
@@ -221,17 +222,71 @@
        - alt: short description of the photo
        ================================================ */
     var GALLERY_IMAGES = [
-      { file: "themercury11.jpg",  category: "amenities", alt: "Lobby Chandelier" },
-      { file: "themercury125.jpg", category: "amenities", alt: "Art Deco Lounge" },
-      { file: "themercury131.jpg", category: "amenities", alt: "Resident Lounge" },
-      { file: "themercury133.jpg", category: "amenities", alt: "Lounge Seating" },
-      { file: "themercury135.jpg", category: "interior",  alt: "Living Room" },
-      { file: "themercury141.jpg", category: "interior",  alt: "Spa Bath" },
-      { file: "themercury144.jpg", category: "amenities", alt: "Grand Lobby" },
-      { file: "themercury155.jpg", category: "interior",  alt: "Soaking Tub" },
-      { file: "themercury21.jpg",  category: "amenities", alt: "Resident Clubhouse" },
-      { file: "themercury31.jpg",  category: "interior",  alt: "Powder Room" },
-      /* Add more images below — just copy the line above and change the values */
+      // EXTERIOR
+      { file: "themercury08.jpg",  category: "exterior",      alt: "The Mercury Building" },
+      { file: "themercury70.jpg",  category: "exterior",      alt: "Main Entrance" },
+      { file: "themercury71.jpg",  category: "exterior",      alt: "Building Entrance" },
+      { file: "themercury75.jpg",  category: "exterior",      alt: "The Mercury Facade" },
+      { file: "themercury77.jpg",  category: "exterior",      alt: "Retail Walkway" },
+      { file: "themercury79.jpg",  category: "exterior",      alt: "Building Exterior" },
+      { file: "themercury97.jpg",  category: "exterior",      alt: "Art Deco Architecture" },
+      { file: "themercury98.jpg",  category: "exterior",      alt: "Building Courtyard" },
+      { file: "themercury99.jpg",  category: "exterior",      alt: "Art Deco Facade Detail" },
+      { file: "themercury101.jpg", category: "exterior",      alt: "Building Upper Floors" },
+      { file: "themercury102.jpg", category: "exterior",      alt: "Art Deco Entrance Light" },
+      { file: "themercury103.jpg", category: "exterior",      alt: "Building Address" },
+      { file: "themercury112.jpg", category: "exterior",      alt: "Rooftop View" },
+      { file: "themercury117.jpg", category: "exterior",      alt: "Building Corridor" },
+      { file: "themercury120.jpg", category: "exterior",      alt: "Mercury Lobby Entrance" },
+      // NEIGHBORHOOD
+      { file: "themercury36.jpg",  category: "neighborhood",  alt: "Wildwood District View" },
+      { file: "themercury92.jpg",  category: "neighborhood",  alt: "Wildwood Shopping District" },
+      { file: "themercury109.jpg", category: "neighborhood",  alt: "Balducci's Aerial View" },
+      // AMENITIES
+      { file: "themercury11.jpg",  category: "amenities",     alt: "Lobby Chandelier" },
+      { file: "themercury13.jpg",  category: "amenities",     alt: "Art Deco Staircase" },
+      { file: "themercury15.jpg",  category: "amenities",     alt: "Grand Staircase" },
+      { file: "themercury16.jpg",  category: "amenities",     alt: "Art Deco Lighting" },
+      { file: "themercury18.jpg",  category: "amenities",     alt: "Resident Lounge Kitchen" },
+      { file: "themercury20.jpg",  category: "amenities",     alt: "Resident Lounge" },
+      { file: "themercury21.jpg",  category: "amenities",     alt: "Mercury Club" },
+      { file: "themercury22.jpg",  category: "amenities",     alt: "Mercury Club Bar" },
+      { file: "themercury24.jpg",  category: "amenities",     alt: "Mercury Club Lounge" },
+      { file: "themercury31.jpg",  category: "amenities",     alt: "Powder Room" },
+      { file: "themercury37.jpg",  category: "amenities",     alt: "Rooftop Hot Tub" },
+      { file: "themercury40.jpg",  category: "amenities",     alt: "Rooftop Terrace" },
+      { file: "themercury44.jpg",  category: "amenities",     alt: "Fitness Center" },
+      { file: "themercury45.jpg",  category: "amenities",     alt: "Lobby Art Gallery" },
+      { file: "themercury59.jpg",  category: "amenities",     alt: "Concierge Desk" },
+      { file: "themercury60.jpg",  category: "amenities",     alt: "Art Deco Lobby Lounge" },
+      { file: "themercury61.jpg",  category: "amenities",     alt: "Grand Lobby" },
+      { file: "themercury63.jpg",  category: "amenities",     alt: "Lobby Clock" },
+      { file: "themercury68.jpg",  category: "amenities",     alt: "Vintage Mercury Automobile" },
+      { file: "themercury74.jpg",  category: "amenities",     alt: "Bocce Court" },
+      { file: "themercury106.jpg", category: "amenities",     alt: "Art Deco Railing" },
+      { file: "themercury108.jpg", category: "amenities",     alt: "Mercury Club Chandelier" },
+      { file: "themercury113.jpg", category: "amenities",     alt: "Roof Terrace" },
+      { file: "themercury115.jpg", category: "amenities",     alt: "Lobby Fireplace" },
+      { file: "themercury125.jpg", category: "amenities",     alt: "Art Deco Lounge" },
+      { file: "themercury131.jpg", category: "amenities",     alt: "Resident Lounge" },
+      { file: "themercury132.jpg", category: "amenities",     alt: "Art Deco Apartment Door" },
+      { file: "themercury144.jpg", category: "amenities",     alt: "Grand Lobby" },
+      { file: "themercury145.jpg", category: "amenities",     alt: "Art Deco Staircase Railing" },
+      { file: "themercury147.jpg", category: "amenities",     alt: "Lobby Chandelier & Clock" },
+      // INTERIORS
+      { file: "themercury54.jpg",  category: "interior",      alt: "Spa Shower Tile" },
+      { file: "themercury55.jpg",  category: "interior",      alt: "Living Room" },
+      { file: "themercury56.jpg",  category: "interior",      alt: "Master Bedroom" },
+      { file: "themercury83.jpg",  category: "interior",      alt: "Art Deco Shower" },
+      { file: "themercury85.jpg",  category: "interior",      alt: "Designer Bathroom" },
+      { file: "themercury127.jpg", category: "interior",      alt: "Chef's Kitchen" },
+      { file: "themercury128.jpg", category: "interior",      alt: "Bedroom" },
+      { file: "themercury130.jpg", category: "interior",      alt: "Open Floor Plan" },
+      { file: "themercury134.jpg", category: "interior",      alt: "Kitchen Backsplash" },
+      { file: "themercury135.jpg", category: "interior",      alt: "Living Room" },
+      { file: "themercury141.jpg", category: "interior",      alt: "Spa Bath" },
+      { file: "themercury154.jpg", category: "interior",      alt: "Double Vanity Bath" },
+      { file: "themercury155.jpg", category: "interior",      alt: "Soaking Tub" },
     ];
 
     /* Build gallery */
