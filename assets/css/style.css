@@ -435,9 +435,7 @@ h1, h2, h3, h4 {
   border-color: rgba(201,168,76,0.3);
 }
 .amenity-card__icon {
-  font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-  display: block;
+  display: none;
 }
 .amenity-card__title {
   font-family: var(--font-serif);
@@ -627,7 +625,7 @@ h1, h2, h3, h4 {
   font-size: 0.82rem;
   margin-bottom: 0.85rem;
 }
-.footer__contact-line span:first-child { color: var(--gold); flex-shrink: 0; }
+.footer__contact-line span { color: rgba(255,255,255,0.7); }
 
 .footer__bottom {
   display: flex;
@@ -687,7 +685,7 @@ h1, h2, h3, h4 {
 .amenity-section:nth-child(even) .amenity-list-item { background: var(--white); }
 .amenity-list-item:hover { border-color: var(--gold); transform: translateY(-2px); }
 
-.amenity-list-item__icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.amenity-list-item__icon { display: none; }
 .amenity-list-item__text { font-size: 1.2rem; color: var(--gray-dark); line-height: 1.5; }
 
 /* neighborhood badge */
@@ -814,7 +812,7 @@ h1, h2, h3, h4 {
   padding: 2rem;
   border: 1px solid rgba(255,255,255,0.1);
 }
-.commute-item__icon { font-size: 2rem; margin-bottom: 1rem; }
+.commute-item__icon { display: none; }
 .commute-item__label { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
 .commute-item__value { font-family: var(--font-serif); font-size: 1.6rem; color: var(--white); }
 
@@ -902,7 +900,7 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 }
 .form-success h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1rem; color: var(--navy); }
 .form-success p  { color: var(--gray-dark); }
-.form-success .check { font-size: 3rem; color: var(--gold); margin-bottom: 1rem; }
+.form-success .check { display: none; }
 
 /* ============================================================
    ANIMATIONS
