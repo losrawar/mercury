@@ -21,7 +21,7 @@
   --font-sans:  'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 
   --max-w: 1240px;
-  --nav-h: 80px;
+  --nav-h: 120px;
   --transition: 0.35s ease;
 }
 
@@ -148,7 +148,7 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 .nav__logo img {
-  height: 75px;
+  height: 110px;
   width: auto;
   filter: brightness(0) invert(1);
   display: block;
@@ -942,9 +942,10 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
    RESPONSIVE — Mobile
    ============================================================ */
 @media (max-width: 768px) {
-  :root { --nav-h: 68px; }
+  :root { --nav-h: 90px; }
   .section { padding: 70px 0; }
 
+  .nav__logo img { height: 76px; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
