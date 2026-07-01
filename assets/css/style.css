@@ -956,7 +956,24 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
-  .hero__heading { font-size: 2.6rem; }
+  .hero__heading { font-size: 3rem; }
+  .hero__sub { font-size: 1.2rem; }
+  .hero__tag span { font-size: 1rem; }
+
+  .about__text h2 { font-size: 2.4rem; }
+  p { font-size: 1.1rem; }
+  .eyebrow { font-size: 1rem; }
+
+  .amenity-card__title { font-size: 1.5rem; }
+  .amenity-card__desc { font-size: 1.05rem; }
+
+  .section-header h2 { font-size: 2.4rem; }
+  .resident-card h3 { font-size: 1.4rem; }
+  .resident-card p { font-size: 1.05rem; }
+
+  .page-hero h1 { font-size: 3rem; }
+  .page-hero p { font-size: 1.2rem; }
+
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .hero__actions .btn { width: 100%; text-align: center; }
 
@@ -986,7 +1003,11 @@ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 @media (max-width: 480px) {
   .container { padding: 0 1.25rem; }
-  .hero__heading { font-size: 2rem; }
+  .hero__heading { font-size: 2.4rem; }
+  .hero__sub { font-size: 1.1rem; }
+  .about__text h2 { font-size: 2rem; }
+  .section-header h2 { font-size: 2rem; }
+  .page-hero h1 { font-size: 2.4rem; }
   .section { padding: 50px 0; }
   .about__stats { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 2rem 1.5rem; }
