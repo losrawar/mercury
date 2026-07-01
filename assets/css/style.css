@@ -148,7 +148,7 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 .nav__logo img {
-  height: 58px;
+  height: 75px;
   width: auto;
   filter: brightness(0) invert(1);
   display: block;
