@@ -144,22 +144,14 @@ h1, h2, h3, h4 {
 
 .nav__logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   line-height: 1;
 }
-.nav__logo-name {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.05em;
-}
-.nav__logo-sub {
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
+.nav__logo img {
+  height: 58px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  display: block;
 }
 
 .nav__links {
