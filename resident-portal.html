@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Floor Plans | The Mercury Bethesda Luxury Apartments</title>
-  <meta name="description" content="Explore floor plans, pricing, and availability at The Mercury Bethesda — boutique luxury apartments in the Wildwood district of Bethesda, MD." />
-  <meta name="keywords" content="Mercury Bethesda floor plans, Wildwood Bethesda apartment floor plans, luxury apartment availability Bethesda MD" />
+  <title>Resident Portal | The Mercury Bethesda Luxury Apartments</title>
+  <meta name="description" content="Current residents of The Mercury Bethesda can pay rent, submit maintenance requests, and manage their account through our online resident portal." />
+  <meta name="keywords" content="Mercury Bethesda resident portal, pay rent Mercury Bethesda, resident login Wildwood Bethesda apartments" />
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Floor Plans | The Mercury Bethesda" />
-  <meta property="og:description" content="Explore floor plans, pricing, and availability at The Mercury Bethesda." />
-  <meta property="og:url"         content="https://www.themercurybethesda.com/floor-plans.html" />
+  <meta property="og:title"       content="Resident Portal | The Mercury Bethesda" />
+  <meta property="og:description" content="Current residents can pay rent, submit maintenance requests, and manage their account online." />
+  <meta property="og:url"         content="https://www.themercurybethesda.com/resident-portal.html" />
   <meta property="og:image"       content="assets/images/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="canonical" href="https://www.themercurybethesda.com/floor-plans.html" />
+  <link rel="canonical" href="https://www.themercurybethesda.com/resident-portal.html" />
+  <style>
+    /* The Rexi widget script injects its own global font reset (Roboto) on
+       body, which can win the cascade regardless of source order since it's
+       added at runtime. This selector is more specific than a bare "body"
+       rule, so it holds regardless of when the widget's CSS loads. */
+    html body { font-family: var(--font-serif); }
+  </style>
 </head>
 <body>
 
@@ -54,44 +61,40 @@
   <main>
 
     <!-- PAGE HERO -->
-    <section class="page-hero page-hero--floorplans" aria-labelledby="floor-plans-title">
+    <section class="page-hero" aria-labelledby="portal-title">
       <div class="page-hero__content">
-        <span class="eyebrow">Available Residences</span>
-        <h1 id="floor-plans-title">Find Your Perfect Floor Plan</h1>
-        <p>Discover thoughtfully designed one, two, and three bedroom homes at The Mercury, where luxury meets convenience in the heart of Bethesda, each residence complemented by a range of modern amenities for everyday living.</p>
+        <span class="eyebrow">For Current Residents</span>
+        <h1 id="portal-title">Resident Portal</h1>
+        <p>Pay rent, submit maintenance requests, and manage your account online through our resident portal, powered by Rexi.</p>
       </div>
     </section>
 
-    <!-- CURRENT AVAILABILITY / REXI EMBED -->
-    <section class="section" style="background:var(--off-white);" aria-label="Floor plans and availability">
-      <div class="container">
-        <div class="section-header center fade-up">
-          <span class="eyebrow">Explore Your Options</span>
-          <span class="gold-rule"></span>
-          <h2>Current Availability</h2>
-          <p>Browse live floor plans, pricing, and availability below.</p>
+    <!-- PORTAL ACCESS -->
+    <section class="section" aria-label="Resident portal access">
+      <div class="container text-center">
+        <div style="max-width:680px;margin:0 auto;">
+          <span class="eyebrow">Resident Login</span>
+          <h2 style="font-size:var(--fs-heading);color:var(--navy);margin-bottom:1rem;">Access Your Account</h2>
+          <p style="font-family:var(--font-serif);color:var(--gray-dark);margin-bottom:2.5rem;">
+            The Mercury Bethesda partners with Rexi to give residents a simple way to pay rent, track maintenance requests, and stay up to date with community news.
+          </p>
         </div>
 
-        <!-- REXI FLOOR PLANS WIDGET -->
-        <div id="rexi-floor-plans" class="fade-up" style="background:var(--white);border:1px solid var(--gray-light);">
-          <iframe
-            src="https://api.rexiportal.com/plugin/floor_plans_list?api_key=MV5ZcPaXcAv8Go7mLPQtLLXIf0FSnfpjL1"
-            width="100%"
-            height="1400px"
-            style="border:none;display:block;"
-            title="The Mercury Bethesda floor plans and availability">
-          </iframe>
-        </div>
+        <!-- Code for Resident Portal -->
+        <div id="resport-resident-app">Loading</div>
+        <noscript>Your browser does not support JavaScript!</noscript>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" aria-labelledby="floor-plans-cta">
-      <div class="container">
-        <span class="eyebrow" style="color:var(--navy);opacity:0.6;">Ready to Move In?</span>
-        <h2 id="floor-plans-cta">Find Your Perfect Fit</h2>
-        <p>Schedule a private tour to explore our floor plans in person and find the residence that's right for you.</p>
-        <a href="contact.html" class="btn btn-navy">Schedule a Tour</a>
+    <!-- ALTERNATE CONTACT -->
+    <section class="section" style="background:var(--off-white);padding:60px 0;" aria-labelledby="portal-help-heading">
+      <div class="container text-center">
+        <span class="eyebrow">Need Assistance?</span>
+        <h2 id="portal-help-heading" style="font-size:2rem;color:var(--navy);margin-bottom:0.75rem;">We're Here to Help</h2>
+        <p style="font-family:var(--font-serif);color:var(--gray-dark);max-width:480px;margin:0 auto 2rem;">
+          If you have trouble accessing your resident account, our leasing office is happy to assist.
+        </p>
+        <a href="tel:3016529000" class="btn btn-navy">301-652-9000</a>
       </div>
     </section>
 
@@ -148,5 +151,11 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- Rexi Resident Portal widget -->
+  <script src="https://api.rexiportal.com/plugin/react-app.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    residentAppInit({property_id: 404})
+  </script>
 </body>
 </html>
